@@ -1,0 +1,287 @@
+@import url("font-face.css");
+@import url("bootstrap-submenu.min.css");
+
+body {
+    background-color: #ff8916;
+    font-family: 'Ubuntu';
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+    position: relative;
+    min-height: 100%;
+}
+body {
+    /* Margin bottom by footer height */
+    
+    margin-bottom: 60px;
+}
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    /* Set the fixed height of the footer here */
+    
+    height: 60px;
+    background-color: #ff8916;
+}
+.footer > .container {
+    padding-right: 15px;
+    padding-left: 15px;
+}
+.container .text-muted {
+    text-align: center;
+    font-size: 12px;
+    color: #333;
+}
+/* Custom page CSS
+-------------------------------------------------- */
+a:hover {
+    text-decoration: none;
+}
+/*.container {
+    width: 95%;
+}*/
+.navbar-static-top {
+    margin-bottom: 19px;
+}
+.container .text-muted {
+    margin: 20px 0;
+}
+.navbar-default {
+    background-color: #276bb0;
+    color: #89b5e1;
+    border-color: #276bb0;
+    -webkit-box-shadow: 0px 2px 0px 0px rgba(182,200,216,0.53);
+    -moz-box-shadow: 0px 2px 0px 0px rgba(182,200,216,0.53);
+    box-shadow: 0px 2px 0px 0px rgba(182,200,216,0.53);
+}
+.navbar-default .navbar-brand {
+    color: #fff;
+    font-weight: bolder;
+}
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus {
+    color: #F5F5F5;
+}
+.navbar-default .navbar-nav > li > a {
+    font-weight: 500;
+    color: #89b5e1;
+}
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+    color: #a6c7e9;
+    background-color: rgba(0, 0, 0, .3);
+}
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+    color: #a6c7e9;
+}
+.navbar-default .navbar-nav > li > .nama_akun:hover,
+.navbar-default .navbar-nav > li > .nama_akun:focus {
+    color: #89b5e1;
+    cursor: default;
+}
+.navbar-default .navbar-nav > .open > a,
+.navbar-default .navbar-nav > .open > a:hover,
+.navbar-default .navbar-nav > .open > a:focus {
+    color: #FFFFFF;
+    background-color: rgba(0, 0, 0, .3);
+}
+.navbar-toggle {
+    background-color: #eef2f6;
+    border-color: #eef2f6;
+}
+.dropdown .dropdown-menu > li > a {
+    color: #6a97d9 !important;
+}
+.dropdown .dropdown-menu > li > a:hover,
+.dropdown .dropdown-menu > li > a:focus {
+    background-color: #f2f4f6;
+}
+.dropdown-menu .dropdown-submenu > li > a {
+    color: #6a97d9 !important;
+}
+.dropdown-menu .dropdown-submenu > li > a:hover,
+.dropdown-menu .dropdown-submenu > li > a:focus {
+    background-color: #f2f4f6;
+}
+
+
+.badge {
+    /*background-color: #276bb0;*/
+    background-color: #89b5e1;
+}
+.btn-custom {
+  background-color: #276bb0;
+  border-color: #276bb0;
+}
+.btn-custom:hover,
+.btn-custom:focus,
+.btn-custom:active,
+.btn-custom.active {
+  background-color: #225e9b;
+  border-color: #1e5286;
+}
+.btn-custom.disabled,
+.btn-custom.disabled:hover,
+.btn-custom.disabled:focus,
+.btn-custom.disabled:active,
+.btn-custom.disabled.active,
+.btn-custom[disabled],
+.btn-custom[disabled]:hover,
+.btn-custom[disabled]:focus,
+.btn-custom[disabled]:active,
+.btn-custom[disabled].active,
+fieldset[disabled] .btn-custom:hover,
+fieldset[disabled] .btn-custom:focus,
+fieldset[disabled] .btn-custom:active,
+fieldset[disabled] .btn-custom.active {
+  background-color: #276bb0;
+  border-color: #276bb0;
+}
+
+
+
+/* X Panel
+-------------------------------------------------- */
+.x_panel {
+    position: relative;
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px 20px;
+    display: inline-block;
+    border-radius: 3px !important;
+    background-color: #fff;
+    border: 1px solid #d3dde5 !important;
+    -webkit-box-shadow: 0px 1px 0px 0px rgba(182,200,216,0.45);
+    -moz-box-shadow: 0px 1px 0px 0px rgba(182,200,216,0.45);
+    box-shadow: 0px 1px 0px 0px rgba(182,200,216,0.45);
+}
+.x_title {
+    border-bottom: 1px solid #d3dde5;
+    /*border-bottom: 2px solid #E6E9ED;*/
+    
+    padding: 1px 5px 6px;
+    margin-bottom: 10px;
+}
+.x_title .filter {
+    width: 40%;
+    float: right;
+}
+.x_title h2 {
+    margin: 5px 0 6px;
+    float: left;
+    display: block;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+.x_title h2 small {
+    margin-left: 10px;
+}
+.x_title span {
+    /*color: #BDBDBD;*/
+}
+.x_content {
+    color: #333;
+    padding: 0 5px 60px;
+    position: relative;
+    width: 100%;
+    float: left;
+    clear: both;
+    margin-top: 5px;
+}
+/*****************************************************************/
+.jumbotron {
+    border-radius: 3px !important;
+    background-color: #fff;
+    padding: 5px 30px !important;
+    border: 1px solid #d3dde5 !important;
+    -webkit-box-shadow: 0px 1px 0px 0px rgba(182,200,216,0.45);
+    -moz-box-shadow: 0px 1px 0px 0px rgba(182,200,216,0.45);
+    box-shadow: 0px 1px 0px 0px rgba(182,200,216,0.45);
+}
+.jumbotron p {
+    font-size: 16px;
+}
+.thumbnail, .panel {
+    background-color: #fff;
+    border-radius: 3px !important;
+    border: 1px solid #d3dde5 !important;
+    -webkit-box-shadow: 0px 1px 0px 0px rgba(182,200,216,0.45);
+    -moz-box-shadow: 0px 1px 0px 0px rgba(182,200,216,0.45);
+    box-shadow: 0px 1px 0px 0px rgba(182,200,216,0.45);
+}
+.list-group {
+    background-color: #fff;
+    border-radius: 3px !important;
+}
+.list-group-item, a.list-group-item {
+    border: 1px solid #d3dde5 !important;
+    -webkit-box-shadow: 0px 1px 0px 0px rgba(182,200,216,0.45);
+    -moz-box-shadow: 0px 1px 0px 0px rgba(182,200,216,0.45);
+    box-shadow: 0px 1px 0px 0px rgba(182,200,216,0.45);
+}
+.list-group > a:hover {
+    background-color: #e8ecef;
+}
+.panel .panel-heading {
+    background-color: #fff;
+}
+.panel .panel-heading h3 {
+    font-size: 18px;
+}
+.list-group .list-group-item h5 {
+    font-size: 18px;
+    margin-bottom: 2px;
+    margin-top: 2px;
+}
+table th {
+    cursor: pointer;
+}
+table td {
+    cursor: default;
+}
+/*********************input-group*/
+.form-control {
+    cursor: pointer;
+}
+.form-control:focus {
+    cursor: text;
+}
+.form-control[readonly]:focus {
+    cursor: pointer;
+}
+.input-group .form-control {
+    border-radius: 4px !important;
+    box-shadow: none;
+}
+.input-group input:hover,
+.input-group input:focus {
+    border: 1px solid #1795ed;
+    box-shadow: none;
+}
+.input-group select:hover,
+.input-group select:focus {
+    border: 1px solid #1795ed;
+    box-shadow: none;
+}
+.input-group textarea:hover,
+.input-group textarea:focus {
+    border: 1px solid #1795ed;
+    box-shadow: none;
+}
+.kv-avatar .file-preview-frame,.kv-avatar .file-preview-frame:hover {
+    margin: 0;
+    padding: 0;
+    border: none;
+    box-shadow: none !important;
+    text-align: center;
+}
+.kv-avatar .file-input {
+    display: table-cell;
+    max-width: 220px;
+}
