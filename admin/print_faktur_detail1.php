@@ -7,7 +7,7 @@ $page = "order";
 
 $kd_faktur = $_GET['kd_faktur'];
 $id = $_GET['pelanggan'];
-$sql_order_produk = $con->query("SELECT a.*, b.* FROM order_produk as a, produk as b WHERE a.kd_faktur='$kd_faktur' AND b.kd_produk=a.kd_produk ");
+$sql_order_produk = $con->query("SELECT a.*, b.* FROM penjualan as a, produk as b WHERE a.kd_faktur='$kd_faktur' AND b.kd_produk=a.kd_produk ");
 $row_order_produk = $sql_order_produk->fetch(PDO::FETCH_LAZY);
 $trow_order_produk = $sql_order_produk->rowCount();
 
