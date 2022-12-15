@@ -21,7 +21,7 @@ $row_kontak = $sql_kontak->fetch(PDO::FETCH_LAZY);
   <title></title>
   <link rel="stylesheet" href="assets/css/bootstrap.min.css">
   <link rel="stylesheet" href="assets/css/animate.css">
-  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/toko.css">
   <link rel="stylesheet" href="assets/css/sweetalert.css">
   <link rel="stylesheet" href="assets/fontawesome/css/font-awesome.min.css">
   <link rel="stylesheet" href="assets/css/jquery.bootstrap-touchspin.min.css">
