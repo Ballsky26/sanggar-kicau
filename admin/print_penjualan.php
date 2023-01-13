@@ -188,7 +188,7 @@ $tharga = 0;
 			========================================================= -->
             <div class="row" style="margin-top: 50px">
             	<div class="col-xs-4 pull-right" style="text-align: center">
-            		<p>Batang, <?php echo longDate(date("Y-m-d")); ?></p>
+            		<p>Pekalongan, <?php echo longDate(date("Y-m-d")); ?></p>
 					<p>Manager <?php echo $nama_perusahaan ?></p>
             	</div>
             </div>

@@ -190,7 +190,7 @@ $no = 1;
             </div>
             <div class="row" style="margin-top: 70px">
             	<div class="col-xs-4 pull-right" style="text-align: center">
-            		Panji Agus  Pranama
+            		Sumarhati
             	</div>
             </div>
     	</div>

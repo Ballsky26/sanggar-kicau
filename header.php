@@ -58,7 +58,7 @@ $row_halaman = $sql_halaman->fetch(PDO::FETCH_LAZY);
             ================================================ -->
         <form id="form_cari" method="get" class="navbar-form navbar-left" action="produk" style="padding-top: 2px">
             <div class="form-group has-feedback">
-                <input id="input_cari" type="text" placeholder="Cari Produk Disini.." class="form-control input-sm" name="cari_barang" style="width: 500px">
+                <input id="input_cari" type="text" placeholder="Cari Produk Disini.." class="form-control input-sm" name="cari_barang" style="width: 400px">
                 <span class="glyphicon glyphicon-search form-control-feedback" aria-hidden="true" style="color: #AAAAAA"></span>
             </div>
         </form>

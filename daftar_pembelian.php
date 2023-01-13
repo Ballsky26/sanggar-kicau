@@ -136,7 +136,7 @@ if ((isset($_POST["pilih_pembayaran"])) && ($_POST["pilih_pembayaran"] == "y")) 
   $pembayaran = $_POST['pembayaran'];
 
   if ($pembayaran == "COD") {
-    $con->exec("UPDATE faktur SET pembayaran='$pembayaran', kurir='Flanel', biaya_pengiriman='10000', lama_kirim='2' WHERE kd_faktur='$faktur'");
+    $con->exec("UPDATE faktur SET pembayaran='$pembayaran', kurir='sanggar kicau', biaya_pengiriman='10000', lama_kirim='2' WHERE kd_faktur='$faktur'");
   } else {
     $con->exec("UPDATE faktur SET pembayaran='$pembayaran', kurir='jne', biaya_pengiriman='0', lama_kirim=null WHERE kd_faktur='$faktur'");
   }
@@ -223,6 +223,9 @@ $row_tampil_pengiriman = $sql_tampil_pengiriman->fetch(PDO::FETCH_LAZY);
         </ol>
         <hr>
         <?php if (!empty($trow_penjualan)) : ?>
+          <div class="col-xs-6">
+              <h4 class="pull-left">Faktur Pembelian: <span style="color: red"><?php echo $faktur ?></span></h4>
+            </div>
           <div class="row">
             <!-- 
 						=========================================================== Pilih Metode Pembayaran -->
@@ -271,9 +274,7 @@ $row_tampil_pengiriman = $sql_tampil_pengiriman->fetch(PDO::FETCH_LAZY);
                 </div>
               <?php endif ?>
             </div>
-            <div class="col-xs-6">
-              <h4 class="pull-right">Faktur Pembelian: <span style="color: red"><?php echo $faktur ?></span></h4>
-            </div>
+            
           </div>
           <table class="table table-bordered table-hover" style="font-size: 12px">
             <thead>
@@ -355,8 +356,8 @@ $row_tampil_pengiriman = $sql_tampil_pengiriman->fetch(PDO::FETCH_LAZY);
                       <?php echo $row_tampil_pengiriman['kdpos_penerima']; ?><br>
                     </div>
                   </div>
-                  <a href="#ubah-alamat" data-toggle="modal" class="btn btn-info btn-sm">
-                    Ubah Alamat</a>
+                  <a href="#ubah-alamat" data-toggle="modal" class="btn btn-warning btn-sm">
+                    Ganti Alamat</a>
                 </td>
                 <!-- ./ Kolom Pengiriman -->
                 <td>
@@ -373,7 +374,7 @@ $row_tampil_pengiriman = $sql_tampil_pengiriman->fetch(PDO::FETCH_LAZY);
                 </td>
                 <td width="150px">
                   <?php if ($row_data_faktur['pembayaran'] == "COD") { ?>
-                    <h5>Ongkir (Flanel)</h5>
+                    <h5>Ongkir (Sanggar Kicau)</h5>
                     <?php
                     $ongkir = $row_data_faktur['biaya_pengiriman'];
                     echo uang($ongkir);
@@ -443,8 +444,8 @@ $row_tampil_pengiriman = $sql_tampil_pengiriman->fetch(PDO::FETCH_LAZY);
               </tr>
               <tr>
                 <td align="left" style="font-size: 16px">
-                  <a href="./" class="btn btn-success pull-left">
-                    Belanja Lagi?</a>
+                  <a href="./" class="btn btn-info pull-left">
+                    Tambah Lagi?</a>
                 </td>
                 <td colspan="4" align="right" style="font-size: 16px"> Total Tagihan
                   <b style="color: red;"><?php echo uang($sub_total + $ongkir); ?></b>
@@ -457,8 +458,7 @@ $row_tampil_pengiriman = $sql_tampil_pengiriman->fetch(PDO::FETCH_LAZY);
               <button name="selesai_belanja" value="y" type="button" class="btn btn-success pull-right" disabled>Selesai
                 Belanja</button>
             <?php else : ?>
-              <button name="selesai_belanja" value="y" type="submit" class="btn btn-success pull-right">Selesai
-                Belanja</button>
+              <button name="selesai_belanja" value="y" type="submit" class="btn btn-success pull-right">Checkout</button>
             <?php endif; ?>
             <input type="hidden" name="pembayaran" value="<?php echo $row_data_faktur['pembayaran']; ?>">
           </form>

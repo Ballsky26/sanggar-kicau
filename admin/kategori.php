@@ -76,7 +76,7 @@ $trow = $sql->rowCount();
 				                                <td width="10%">
 					                                <form method="POST" class="form-inline">
 														<?php if(!empty($trow)): ?>
-															<a href="kategori_edit?kd_kategori=<?php echo $kd_kategori; ?>" class="btn btn-info btn-xs">Edit</a>
+															<a href="kategori_edit?kd_kategori=<?php echo $kd_kategori; ?>" class="btn btn-warning btn-xs">Edit</a>
                                                     		<button type="submit" class='submit btn btn-danger btn-xs'>Hapus</button> 
 														<?php endif; ?>
 						                                <input type="hidden" name="fhapus" value="y" />

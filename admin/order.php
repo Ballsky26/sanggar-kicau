@@ -71,7 +71,7 @@ $trow = $sql->rowCount();
 				                	<br><br>
 
 				                	<!-- Tabel -->
-				                    <table id="tabel" class="table table-bordered table-striped" cellspacing="0" width="100%" style="font-size: 12px">
+				                    <table id="tabel" class="table table-bordered table-striped" cellspacing="0" width="100%" style="font-size: 13px">
 				                        <thead>
 				                            <tr>
 				                                <th>KD. Faktur</th>
@@ -105,7 +105,7 @@ $trow = $sql->rowCount();
 				                                <td width="10%">
 					                                <form method="POST">
 														<?php if(!empty($trow)): ?>
-															<a href="detail_order?kd_faktur=<?php echo $kd_faktur; ?>&&pelanggan=<?php echo $row['userid'] ?>" class="btn btn-info btn-xs">Detail</a>
+															<a href="detail_order?kd_faktur=<?php echo $kd_faktur; ?>&&pelanggan=<?php echo $row['userid'] ?>" class="btn btn-warning btn-xs">Detail</a>
 															<?php if ($row['konfirm'] != 'Sudah'): ?>
 	                                                    		<button type="submit" class='submit btn btn-danger btn-xs'>Hapus</button> 
 															<?php endif ?>

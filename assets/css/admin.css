@@ -2741,7 +2741,7 @@ vertical-align: top;
 */
 /* skin-blue navbar */
 .skin-blue .navbar {
-  background-color: #3c8dbc;
+  background-color: #050505;
 }
 .skin-blue .navbar .nav a {
   color: rgba(255, 255, 255, 0.8);
@@ -2766,7 +2766,7 @@ vertical-align: top;
 }
 /* skin-blue logo */
 .skin-blue .logo {
-  background-color: #367fa9;
+  background-color: #050505;
   color: #f9f9f9;
 }
 .skin-blue .logo > a {

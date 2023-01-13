@@ -60,14 +60,14 @@ h4,h5{
 .harga {
   font-size: 12px;
   font-weight: bold;
-  color: #8D0012;
+  color: #ff0123;
   padding-left: 10px;
   padding-right: 10px;
   height: 37px
 }
 .text-kategori {
   font-weight: bolder;
-  color: #40C3B8
+  color: #ffffff
 
 }
 .thumbnail {
@@ -102,13 +102,12 @@ footer a:hover {
   text-decoration: none;
 }
 .navbar-default {
-    background-color: red
+    background-color: black
 }
 .navbar-default .navbar-nav>.active>a:hover,
 .navbar-default .navbar-nav>li>a:hover,
 .navbar-default .navbar-nav>li>a:focus {
-    /*background-color: #32B0A5*/
-    background-color: #32B0A5
+    background-color: #f7f7f7
 }
 .navbar-default .navbar-nav>.active>a,
 .navbar-default .navbar-nav>.open>a,
@@ -117,14 +116,14 @@ footer a:hover {
 .navbar-default .navbar-nav>.open>a,
 .navbar-default .navbar-nav>.open>a:hover,
 .navbar-default .navbar-nav>.open>a:focus {
-    background-color: #32B0A5
+    background-color: #a9a5a5
 }
 .dropdown-menu {
-    background-color: red
+    background-color: #a9a5a5
 }
 .dropdown-menu>li>a:hover,
 .dropdown-menu>li>a:focus {
-    background-color: #524E70
+    
 }
 .navbar-default {
     background-image: none;
@@ -153,18 +152,18 @@ footer a:hover {
 .navbar-default .navbar-nav>.open>a,
 .navbar-default .navbar-nav>.open>a:hover,
 .navbar-default .navbar-nav>.open>a:focus {
-    color: #4C4C4C
+    color: #ffffff
 }
 .navbar-default .navbar-nav>.active>a:hover,
 .navbar-default .navbar-nav>.active>a:focus {
     color: #4C4C4C
 }
 .dropdown-menu>li>a {
-    color: #40C3B8
+    color: #000000
 }
 .dropdown-menu>li>a:hover,
 .dropdown-menu>li>a:focus {
-    color: #4C4C4C
+    color: #000000
 }
 .navbar-default .navbar-nav>.dropdown>a .caret {
     border-top-color: #999999
