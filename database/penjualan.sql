@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.0
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 13, 2023 at 08:24 AM
--- Server version: 10.4.19-MariaDB
--- PHP Version: 8.0.6
+-- Waktu pembuatan: 18 Jan 2023 pada 15.22
+-- Versi server: 10.4.25-MariaDB
+-- Versi PHP: 8.1.10
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -24,7 +24,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `admin`
+-- Struktur dari tabel `admin`
 --
 
 CREATE TABLE `admin` (
@@ -35,7 +35,7 @@ CREATE TABLE `admin` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `admin`
+-- Dumping data untuk tabel `admin`
 --
 
 INSERT INTO `admin` (`nama_admin`, `alamat_admin`, `tlp_admin`, `email`) VALUES
@@ -44,7 +44,7 @@ INSERT INTO `admin` (`nama_admin`, `alamat_admin`, `tlp_admin`, `email`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `faktur`
+-- Struktur dari tabel `faktur`
 --
 
 CREATE TABLE `faktur` (
@@ -56,7 +56,7 @@ CREATE TABLE `faktur` (
   `kurir` varchar(20) NOT NULL DEFAULT 'jne',
   `lama_kirim` varchar(10) DEFAULT NULL,
   `biaya_pengiriman` double DEFAULT NULL,
-  `konfirm` enum('Sudah','Belum','Tunda') NOT NULL DEFAULT 'Belum',
+  `konfirm` enum('Dikirim','Belum','Menunggu Pembayaran') NOT NULL DEFAULT 'Belum',
   `bukti_transfer` varchar(100) DEFAULT NULL,
   `tgl_kirim` datetime DEFAULT NULL,
   `resi` tinytext DEFAULT NULL,
@@ -64,25 +64,25 @@ CREATE TABLE `faktur` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `faktur`
+-- Dumping data untuk tabel `faktur`
 --
 
 INSERT INTO `faktur` (`kd_faktur`, `userid`, `total_biaya_barang`, `tgl`, `pembayaran`, `kurir`, `lama_kirim`, `biaya_pengiriman`, `konfirm`, `bukti_transfer`, `tgl_kirim`, `resi`, `tgl_terima`) VALUES
-(1670731740, 'robba@gmail.com', 270000, '2022-12-11 04:09:00', 'Transfer', 'jne', '3-6', 8000, 'Sudah', '1670731740.jpg', '2022-12-14 13:11:00', '12345678', '2022-12-11 11:16:05'),
+(1670731740, 'robba@gmail.com', 270000, '2022-12-11 04:09:00', 'Transfer', 'jne', '3-6', 8000, 'Dikirim', '1670731740.jpg', '2022-12-14 13:11:00', '12345678', '2022-12-11 11:16:05'),
 (1671539854, 'robba@gmail.com', 270000, '2022-12-20 12:37:34', 'Transfer', 'jnt', '3-6', 8000, 'Belum', NULL, NULL, NULL, NULL),
-(1671624257, 'hawari@gmail.com', 270000, '2022-12-21 12:04:17', 'COD', 'sanggar kicau', '2', 10000, 'Sudah', NULL, '2022-12-22 22:10:00', 'COD', '2022-12-21 07:10:53'),
-(1671624633, 'hawari@gmail.com', 270000, '2022-12-21 12:10:33', 'Transfer', 'jne', '3-6', 8000, 'Sudah', '1671624633.jpg', '2022-12-22 23:19:00', '122333445566', NULL),
-(1673122327, 'hawari@gmail.com', 135000, '2023-01-07 20:12:07', 'Transfer', 'jne', '3-6', 40000, 'Tunda', NULL, NULL, NULL, NULL),
-(1673578974, 'hawari@gmail.com', 1350000, '2023-01-13 03:02:54', 'Transfer', 'jne', '3-6', 8000, 'Sudah', '1673578974.jpg', '2023-01-13 10:08:00', '999i99999', NULL),
-(1673579122, 'hawari@gmail.com', 446250, '2023-01-13 03:05:22', 'Transfer', 'jne', '3-6', 8000, 'Tunda', NULL, NULL, NULL, NULL),
-(1673580945, 'hawari@gmail.com', 7000, '2023-01-13 03:35:45', 'Transfer', 'jne', '3-6', 8000, 'Tunda', NULL, NULL, NULL, NULL),
-(1673581060, 'hawari@gmail.com', 14000, '2023-01-13 03:37:40', 'Transfer', 'jne', '3-6', 16000, 'Tunda', NULL, NULL, NULL, NULL),
+(1671624257, 'hawari@gmail.com', 270000, '2022-12-21 12:04:17', 'COD', 'sanggar kicau', '2', 10000, 'Belum', NULL, '2022-12-22 22:10:00', 'COD', '2022-12-21 07:10:53'),
+(1671624633, 'hawari@gmail.com', 270000, '2022-12-21 12:10:33', 'Transfer', 'jne', '3-6', 8000, 'Dikirim', '1671624633.jpg', '2022-12-22 23:19:00', '122333445566', NULL),
+(1673122327, 'hawari@gmail.com', 135000, '2023-01-07 20:12:07', 'Transfer', 'jne', '3-6', 40000, 'Belum', NULL, NULL, NULL, NULL),
+(1673578974, 'hawari@gmail.com', 1350000, '2023-01-13 03:02:54', 'Transfer', 'jne', '3-6', 8000, 'Menunggu Pembayaran', '1673578974.jpg', '2023-01-13 10:08:00', '999i99999', NULL),
+(1673579122, 'hawari@gmail.com', 446250, '2023-01-13 03:05:22', 'Transfer', 'jne', '3-6', 8000, 'Menunggu Pembayaran', NULL, NULL, NULL, NULL),
+(1673580945, 'hawari@gmail.com', 7000, '2023-01-13 03:35:45', 'Transfer', 'jne', '3-6', 8000, 'Menunggu Pembayaran', NULL, NULL, NULL, NULL),
+(1673581060, 'hawari@gmail.com', 14000, '2023-01-13 03:37:40', 'Transfer', 'jne', '3-6', 16000, 'Menunggu Pembayaran', NULL, NULL, NULL, NULL),
 (1673582002, 'hawari@gmail.com', 446250, '2023-01-13 03:53:22', 'Transfer', 'jne', '3-6', 8000, 'Belum', NULL, NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `foto_produk`
+-- Struktur dari tabel `foto_produk`
 --
 
 CREATE TABLE `foto_produk` (
@@ -91,7 +91,7 @@ CREATE TABLE `foto_produk` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `foto_produk`
+-- Dumping data untuk tabel `foto_produk`
 --
 
 INSERT INTO `foto_produk` (`kd_produk`, `foto`) VALUES
@@ -113,7 +113,7 @@ INSERT INTO `foto_produk` (`kd_produk`, `foto`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `halaman`
+-- Struktur dari tabel `halaman`
 --
 
 CREATE TABLE `halaman` (
@@ -124,7 +124,7 @@ CREATE TABLE `halaman` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `halaman`
+-- Dumping data untuk tabel `halaman`
 --
 
 INSERT INTO `halaman` (`kd_halaman`, `nama_halaman`, `isi_halaman`, `admin`) VALUES
@@ -133,7 +133,7 @@ INSERT INTO `halaman` (`kd_halaman`, `nama_halaman`, `isi_halaman`, `admin`) VAL
 -- --------------------------------------------------------
 
 --
--- Table structure for table `inbox`
+-- Struktur dari tabel `inbox`
 --
 
 CREATE TABLE `inbox` (
@@ -144,7 +144,7 @@ CREATE TABLE `inbox` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `inbox`
+-- Dumping data untuk tabel `inbox`
 --
 
 INSERT INTO `inbox` (`kd_inbox`, `pengirim`, `judul`, `tujuan`) VALUES
@@ -153,7 +153,7 @@ INSERT INTO `inbox` (`kd_inbox`, `pengirim`, `judul`, `tujuan`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `inbox_detail`
+-- Struktur dari tabel `inbox_detail`
 --
 
 CREATE TABLE `inbox_detail` (
@@ -166,7 +166,7 @@ CREATE TABLE `inbox_detail` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `inbox_detail`
+-- Dumping data untuk tabel `inbox_detail`
 --
 
 INSERT INTO `inbox_detail` (`kd_inbox_detail`, `kd_inbox`, `userid`, `pesan`, `tgl`, `status`) VALUES
@@ -175,7 +175,7 @@ INSERT INTO `inbox_detail` (`kd_inbox_detail`, `kd_inbox`, `userid`, `pesan`, `t
 -- --------------------------------------------------------
 
 --
--- Table structure for table `kategori`
+-- Struktur dari tabel `kategori`
 --
 
 CREATE TABLE `kategori` (
@@ -184,7 +184,7 @@ CREATE TABLE `kategori` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `kategori`
+-- Dumping data untuk tabel `kategori`
 --
 
 INSERT INTO `kategori` (`kd_kategori`, `nama_kategori`) VALUES
@@ -196,7 +196,7 @@ INSERT INTO `kategori` (`kd_kategori`, `nama_kategori`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `kontak`
+-- Struktur dari tabel `kontak`
 --
 
 CREATE TABLE `kontak` (
@@ -206,7 +206,7 @@ CREATE TABLE `kontak` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `kontak`
+-- Dumping data untuk tabel `kontak`
 --
 
 INSERT INTO `kontak` (`kd_kontak`, `kontak`, `isi_kontak`) VALUES
@@ -218,7 +218,7 @@ INSERT INTO `kontak` (`kd_kontak`, `kontak`, `isi_kontak`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `lap_labarugi`
+-- Struktur dari tabel `lap_labarugi`
 --
 
 CREATE TABLE `lap_labarugi` (
@@ -232,7 +232,7 @@ CREATE TABLE `lap_labarugi` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `lap_penjualan`
+-- Struktur dari tabel `lap_penjualan`
 --
 
 CREATE TABLE `lap_penjualan` (
@@ -246,7 +246,7 @@ CREATE TABLE `lap_penjualan` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `pelanggan`
+-- Struktur dari tabel `pelanggan`
 --
 
 CREATE TABLE `pelanggan` (
@@ -260,7 +260,7 @@ CREATE TABLE `pelanggan` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `pelanggan`
+-- Dumping data untuk tabel `pelanggan`
 --
 
 INSERT INTO `pelanggan` (`nama_plg`, `alamat_plg`, `kd_provinsi`, `kd_kota`, `kodepos_plg`, `tlp_plg`, `email_plg`) VALUES
@@ -270,7 +270,7 @@ INSERT INTO `pelanggan` (`nama_plg`, `alamat_plg`, `kd_provinsi`, `kd_kota`, `ko
 -- --------------------------------------------------------
 
 --
--- Table structure for table `pengiriman`
+-- Struktur dari tabel `pengiriman`
 --
 
 CREATE TABLE `pengiriman` (
@@ -284,7 +284,7 @@ CREATE TABLE `pengiriman` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `pengiriman`
+-- Dumping data untuk tabel `pengiriman`
 --
 
 INSERT INTO `pengiriman` (`kd_faktur`, `penerima`, `kd_provinsi`, `kd_kota`, `alamat_penerima`, `kdpos_penerima`, `tlp_penerima`) VALUES
@@ -305,7 +305,7 @@ INSERT INTO `pengiriman` (`kd_faktur`, `penerima`, `kd_provinsi`, `kd_kota`, `al
 -- --------------------------------------------------------
 
 --
--- Table structure for table `penjualan`
+-- Struktur dari tabel `penjualan`
 --
 
 CREATE TABLE `penjualan` (
@@ -317,7 +317,7 @@ CREATE TABLE `penjualan` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `penjualan`
+-- Dumping data untuk tabel `penjualan`
 --
 
 INSERT INTO `penjualan` (`kd_penjualan`, `kd_faktur`, `kd_produk`, `harga_produk`, `jml_beli`) VALUES
@@ -337,7 +337,7 @@ INSERT INTO `penjualan` (`kd_penjualan`, `kd_faktur`, `kd_produk`, `harga_produk
 -- --------------------------------------------------------
 
 --
--- Table structure for table `produk`
+-- Struktur dari tabel `produk`
 --
 
 CREATE TABLE `produk` (
@@ -358,7 +358,7 @@ CREATE TABLE `produk` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `produk`
+-- Dumping data untuk tabel `produk`
 --
 
 INSERT INTO `produk` (`kd_produk`, `nama_produk`, `kd_kategori`, `kondisi`, `warna`, `ukuran`, `berat`, `harga`, `stok`, `deskripsi`, `foto`, `tgl_produk`, `diskon`, `hargabeli`) VALUES
@@ -373,7 +373,7 @@ INSERT INTO `produk` (`kd_produk`, `nama_produk`, `kd_kategori`, `kondisi`, `war
 -- --------------------------------------------------------
 
 --
--- Table structure for table `promo`
+-- Struktur dari tabel `promo`
 --
 
 CREATE TABLE `promo` (
@@ -383,7 +383,7 @@ CREATE TABLE `promo` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `promo`
+-- Dumping data untuk tabel `promo`
 --
 
 INSERT INTO `promo` (`kd_promo`, `isi`, `kd_produk`) VALUES
@@ -400,7 +400,7 @@ INSERT INTO `promo` (`kd_promo`, `isi`, `kd_produk`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `rekening`
+-- Struktur dari tabel `rekening`
 --
 
 CREATE TABLE `rekening` (
@@ -410,7 +410,7 @@ CREATE TABLE `rekening` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `rekening`
+-- Dumping data untuk tabel `rekening`
 --
 
 INSERT INTO `rekening` (`kd_rekening`, `bank`, `no_rek`) VALUES
@@ -421,7 +421,7 @@ INSERT INTO `rekening` (`kd_rekening`, `bank`, `no_rek`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `testimoni`
+-- Struktur dari tabel `testimoni`
 --
 
 CREATE TABLE `testimoni` (
@@ -435,7 +435,7 @@ CREATE TABLE `testimoni` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `user`
+-- Struktur dari tabel `user`
 --
 
 CREATE TABLE `user` (
@@ -447,7 +447,7 @@ CREATE TABLE `user` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `user`
+-- Dumping data untuk tabel `user`
 --
 
 INSERT INTO `user` (`userid`, `password`, `tipe`, `status`, `kode`) VALUES
@@ -461,179 +461,179 @@ INSERT INTO `user` (`userid`, `password`, `tipe`, `status`, `kode`) VALUES
 --
 
 --
--- Indexes for table `admin`
+-- Indeks untuk tabel `admin`
 --
 ALTER TABLE `admin`
   ADD PRIMARY KEY (`email`);
 
 --
--- Indexes for table `faktur`
+-- Indeks untuk tabel `faktur`
 --
 ALTER TABLE `faktur`
   ADD PRIMARY KEY (`kd_faktur`);
 
 --
--- Indexes for table `halaman`
+-- Indeks untuk tabel `halaman`
 --
 ALTER TABLE `halaman`
   ADD PRIMARY KEY (`kd_halaman`);
 
 --
--- Indexes for table `inbox`
+-- Indeks untuk tabel `inbox`
 --
 ALTER TABLE `inbox`
   ADD PRIMARY KEY (`kd_inbox`);
 
 --
--- Indexes for table `inbox_detail`
+-- Indeks untuk tabel `inbox_detail`
 --
 ALTER TABLE `inbox_detail`
   ADD PRIMARY KEY (`kd_inbox_detail`);
 
 --
--- Indexes for table `kategori`
+-- Indeks untuk tabel `kategori`
 --
 ALTER TABLE `kategori`
   ADD PRIMARY KEY (`kd_kategori`);
 
 --
--- Indexes for table `kontak`
+-- Indeks untuk tabel `kontak`
 --
 ALTER TABLE `kontak`
   ADD PRIMARY KEY (`kd_kontak`);
 
 --
--- Indexes for table `lap_labarugi`
+-- Indeks untuk tabel `lap_labarugi`
 --
 ALTER TABLE `lap_labarugi`
   ADD PRIMARY KEY (`kd_laplabarugi`);
 
 --
--- Indexes for table `lap_penjualan`
+-- Indeks untuk tabel `lap_penjualan`
 --
 ALTER TABLE `lap_penjualan`
   ADD PRIMARY KEY (`kd_lappenjualan`);
 
 --
--- Indexes for table `pelanggan`
+-- Indeks untuk tabel `pelanggan`
 --
 ALTER TABLE `pelanggan`
   ADD PRIMARY KEY (`email_plg`);
 
 --
--- Indexes for table `pengiriman`
+-- Indeks untuk tabel `pengiriman`
 --
 ALTER TABLE `pengiriman`
   ADD PRIMARY KEY (`kd_faktur`);
 
 --
--- Indexes for table `penjualan`
+-- Indeks untuk tabel `penjualan`
 --
 ALTER TABLE `penjualan`
   ADD PRIMARY KEY (`kd_penjualan`);
 
 --
--- Indexes for table `produk`
+-- Indeks untuk tabel `produk`
 --
 ALTER TABLE `produk`
   ADD PRIMARY KEY (`kd_produk`);
 
 --
--- Indexes for table `promo`
+-- Indeks untuk tabel `promo`
 --
 ALTER TABLE `promo`
   ADD PRIMARY KEY (`kd_promo`);
 
 --
--- Indexes for table `rekening`
+-- Indeks untuk tabel `rekening`
 --
 ALTER TABLE `rekening`
   ADD PRIMARY KEY (`kd_rekening`);
 
 --
--- Indexes for table `testimoni`
+-- Indeks untuk tabel `testimoni`
 --
 ALTER TABLE `testimoni`
   ADD PRIMARY KEY (`kd_testimoni`);
 
 --
--- Indexes for table `user`
+-- Indeks untuk tabel `user`
 --
 ALTER TABLE `user`
   ADD PRIMARY KEY (`userid`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT untuk tabel yang dibuang
 --
 
 --
--- AUTO_INCREMENT for table `halaman`
+-- AUTO_INCREMENT untuk tabel `halaman`
 --
 ALTER TABLE `halaman`
   MODIFY `kd_halaman` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- AUTO_INCREMENT for table `inbox`
+-- AUTO_INCREMENT untuk tabel `inbox`
 --
 ALTER TABLE `inbox`
   MODIFY `kd_inbox` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT for table `inbox_detail`
+-- AUTO_INCREMENT untuk tabel `inbox_detail`
 --
 ALTER TABLE `inbox_detail`
   MODIFY `kd_inbox_detail` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT for table `kategori`
+-- AUTO_INCREMENT untuk tabel `kategori`
 --
 ALTER TABLE `kategori`
   MODIFY `kd_kategori` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
--- AUTO_INCREMENT for table `kontak`
+-- AUTO_INCREMENT untuk tabel `kontak`
 --
 ALTER TABLE `kontak`
   MODIFY `kd_kontak` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
--- AUTO_INCREMENT for table `lap_labarugi`
+-- AUTO_INCREMENT untuk tabel `lap_labarugi`
 --
 ALTER TABLE `lap_labarugi`
   MODIFY `kd_laplabarugi` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
--- AUTO_INCREMENT for table `lap_penjualan`
+-- AUTO_INCREMENT untuk tabel `lap_penjualan`
 --
 ALTER TABLE `lap_penjualan`
   MODIFY `kd_lappenjualan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
--- AUTO_INCREMENT for table `penjualan`
+-- AUTO_INCREMENT untuk tabel `penjualan`
 --
 ALTER TABLE `penjualan`
   MODIFY `kd_penjualan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
 
 --
--- AUTO_INCREMENT for table `produk`
+-- AUTO_INCREMENT untuk tabel `produk`
 --
 ALTER TABLE `produk`
   MODIFY `kd_produk` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
--- AUTO_INCREMENT for table `promo`
+-- AUTO_INCREMENT untuk tabel `promo`
 --
 ALTER TABLE `promo`
   MODIFY `kd_promo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 
 --
--- AUTO_INCREMENT for table `rekening`
+-- AUTO_INCREMENT untuk tabel `rekening`
 --
 ALTER TABLE `rekening`
   MODIFY `kd_rekening` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
--- AUTO_INCREMENT for table `testimoni`
+-- AUTO_INCREMENT untuk tabel `testimoni`
 --
 ALTER TABLE `testimoni`
   MODIFY `kd_testimoni` int(11) NOT NULL AUTO_INCREMENT;

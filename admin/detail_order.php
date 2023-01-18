@@ -89,7 +89,7 @@ if ($row_data_faktur['pembayaran'] != "COD") {
 								<a href="print_faktur_detail1?kd_faktur=<?php echo $kd_faktur; ?>&pelanggan=<?php echo $id ?>" target="_blank" class="btn btn-success btn-sm"><span class="fa fa-print"></span> Cetak Faktur</a>
 								<br><br>
 
-								<?php if ($row_data_faktur['tgl_kirim'] == NULL and $row_data_faktur['konfirm'] == 'Sudah') : ?>
+								<?php if ($row_data_faktur['tgl_kirim'] == NULL and $row_data_faktur['konfirm'] == 'Dikirim') : ?>
 									<h3>Input Pengiriman</h3>
 									<div class="row">
 										<div class="col-xs-12">
