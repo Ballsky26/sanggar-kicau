@@ -163,9 +163,9 @@ if ((isset($_POST["selesai_belanja"])) && ($_POST["selesai_belanja"] == "y")) {
   $pembayaran = $_POST['pembayaran'];
 
   if ($pembayaran == "COD") {
-    $con->exec("UPDATE faktur SET konfirm='Tunda' WHERE kd_faktur='$faktur'");
+    $con->exec("UPDATE faktur SET konfirm='Menunggu Pembayaran' WHERE kd_faktur='$faktur'");
   } else {
-    $con->exec("UPDATE faktur SET konfirm='Tunda' WHERE kd_faktur='$faktur'");
+    $con->exec("UPDATE faktur SET konfirm='Menunggu Pembayaran' WHERE kd_faktur='$faktur'");
   }
 
   unset($_SESSION['kd_faktur']);
@@ -224,8 +224,8 @@ $row_tampil_pengiriman = $sql_tampil_pengiriman->fetch(PDO::FETCH_LAZY);
         <hr>
         <?php if (!empty($trow_penjualan)) : ?>
           <div class="col-xs-6">
-              <h4 class="pull-left">Faktur Pembelian: <span style="color: red"><?php echo $faktur ?></span></h4>
-            </div>
+            <h4 class="pull-left">Faktur Pembelian: <span style="color: red"><?php echo $faktur ?></span></h4>
+          </div>
           <div class="row">
             <!-- 
 						=========================================================== Pilih Metode Pembayaran -->
@@ -274,7 +274,7 @@ $row_tampil_pengiriman = $sql_tampil_pengiriman->fetch(PDO::FETCH_LAZY);
                 </div>
               <?php endif ?>
             </div>
-            
+
           </div>
           <table class="table table-bordered table-hover" style="font-size: 12px">
             <thead>

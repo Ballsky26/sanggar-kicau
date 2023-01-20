@@ -79,7 +79,7 @@ $faktur = $_GET['faktur'];
 						$foto_baru = $faktur . "." . $extensi;
 						if (move_uploaded_file($_FILES['foto']['tmp_name'], $folder . $foto_baru)) {
 
-							$con->exec("UPDATE faktur SET konfirm='Sudah', bukti_transfer='$foto_baru' WHERE kd_faktur='$faktur'");
+							$con->exec("UPDATE faktur SET konfirm='Dikirim', bukti_transfer='$foto_baru' WHERE kd_faktur='$faktur'");
 							// pesan berhasil
 							tampilPesan("Konfirmasi Berhasil!", "Bukti pembayaran yang anda upload berhasil dikirim!", "success", "./");
 						} else {

@@ -18,7 +18,7 @@ if ((isset($_POST["fbayarcod"])) && ($_POST["fbayarcod"] == "y")) {
 
   $kd_faktur   = $_POST['kd_faktur'];
 
-  $con->exec("UPDATE faktur SET konfirm='Sudah' WHERE kd_faktur='$kd_faktur' ");
+  $con->exec("UPDATE faktur SET konfirm='Dikirim' WHERE kd_faktur='$kd_faktur' ");
   // pesan berhasil
   tampilPesan("Berhasil Disimpan!", "Konfirmasi Pembayaran Tunai Selesai!", "success", "transaksi");
 }
@@ -100,9 +100,9 @@ $trow = $sql->rowCount();
                   <?php } while ($row_penjualan = $sql_penjualan->fetch()); ?>
                 </td>
                 <td>
-                  <?php if ($row['konfirm'] == 'Sudah') : ?>
+                  <?php if ($row['konfirm'] == 'Dikirim') : ?>
                     <?php
-                    if ($row['konfirm'] == 'Sudah') {
+                    if ($row['konfirm'] == 'Dikirim') {
                       if ($row['tgl_kirim'] == NULL) {
                         echo "Barang Sedang Kami Proses";
                       } else {

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 18 Jan 2023 pada 15.22
+-- Waktu pembuatan: 20 Jan 2023 pada 07.54
 -- Versi server: 10.4.25-MariaDB
 -- Versi PHP: 8.1.10
 
@@ -68,16 +68,13 @@ CREATE TABLE `faktur` (
 --
 
 INSERT INTO `faktur` (`kd_faktur`, `userid`, `total_biaya_barang`, `tgl`, `pembayaran`, `kurir`, `lama_kirim`, `biaya_pengiriman`, `konfirm`, `bukti_transfer`, `tgl_kirim`, `resi`, `tgl_terima`) VALUES
-(1670731740, 'robba@gmail.com', 270000, '2022-12-11 04:09:00', 'Transfer', 'jne', '3-6', 8000, 'Dikirim', '1670731740.jpg', '2022-12-14 13:11:00', '12345678', '2022-12-11 11:16:05'),
-(1671539854, 'robba@gmail.com', 270000, '2022-12-20 12:37:34', 'Transfer', 'jnt', '3-6', 8000, 'Belum', NULL, NULL, NULL, NULL),
-(1671624257, 'hawari@gmail.com', 270000, '2022-12-21 12:04:17', 'COD', 'sanggar kicau', '2', 10000, 'Belum', NULL, '2022-12-22 22:10:00', 'COD', '2022-12-21 07:10:53'),
-(1671624633, 'hawari@gmail.com', 270000, '2022-12-21 12:10:33', 'Transfer', 'jne', '3-6', 8000, 'Dikirim', '1671624633.jpg', '2022-12-22 23:19:00', '122333445566', NULL),
-(1673122327, 'hawari@gmail.com', 135000, '2023-01-07 20:12:07', 'Transfer', 'jne', '3-6', 40000, 'Belum', NULL, NULL, NULL, NULL),
-(1673578974, 'hawari@gmail.com', 1350000, '2023-01-13 03:02:54', 'Transfer', 'jne', '3-6', 8000, 'Menunggu Pembayaran', '1673578974.jpg', '2023-01-13 10:08:00', '999i99999', NULL),
-(1673579122, 'hawari@gmail.com', 446250, '2023-01-13 03:05:22', 'Transfer', 'jne', '3-6', 8000, 'Menunggu Pembayaran', NULL, NULL, NULL, NULL),
-(1673580945, 'hawari@gmail.com', 7000, '2023-01-13 03:35:45', 'Transfer', 'jne', '3-6', 8000, 'Menunggu Pembayaran', NULL, NULL, NULL, NULL),
-(1673581060, 'hawari@gmail.com', 14000, '2023-01-13 03:37:40', 'Transfer', 'jne', '3-6', 16000, 'Menunggu Pembayaran', NULL, NULL, NULL, NULL),
-(1673582002, 'hawari@gmail.com', 446250, '2023-01-13 03:53:22', 'Transfer', 'jne', '3-6', 8000, 'Belum', NULL, NULL, NULL, NULL);
+(1674197138, 'robba@gmail.com', 11400, '2023-01-20 06:45:38', 'Transfer', 'jne', '3-6', 8000, 'Dikirim', '1674197138.jpg', NULL, NULL, NULL),
+(1674197172, 'robba@gmail.com', 105600, '2023-01-20 06:46:12', 'Transfer', 'jne', '3-6', 8000, 'Dikirim', '1674197172.jpg', NULL, NULL, NULL),
+(1674197284, 'robba@gmail.com', 7000, '2023-01-20 06:48:04', 'COD', 'sanggar kicau', '2', 10000, 'Dikirim', NULL, NULL, NULL, NULL),
+(1674197410, 'robba@gmail.com', 135000, '2023-01-20 06:50:10', 'Transfer', 'jne', '3-6', 40000, 'Dikirim', '1674197410.jpg', NULL, NULL, NULL),
+(1674197477, 'robba@gmail.com', 135000, '2023-01-20 06:51:17', 'Transfer', 'jne', '3-6', 40000, 'Dikirim', '1674197477.PNG', NULL, NULL, NULL),
+(1674197514, 'robba@gmail.com', 105600, '2023-01-20 06:51:54', 'Transfer', 'jne', '3-6', 8000, 'Dikirim', '1674197514.jpg', NULL, NULL, NULL),
+(1674197609, 'robba@gmail.com', 7000, '2023-01-20 06:53:29', 'COD', 'sanggar kicau', '2', 10000, 'Dikirim', NULL, NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -108,7 +105,8 @@ INSERT INTO `foto_produk` (`kd_produk`, `foto`) VALUES
 (4, 'produk2212221056482.jpg'),
 (5, 'produk2212221100531.jpg .png'),
 (6, 'produk2212221103551.jpg .png'),
-(7, 'produk2212221111091.jpg .png');
+(7, 'produk2212221111091.jpg .png'),
+(8, 'produk2001230137581.jpg');
 
 -- --------------------------------------------------------
 
@@ -300,7 +298,49 @@ INSERT INTO `pengiriman` (`kd_faktur`, `penerima`, `kd_provinsi`, `kd_kota`, `al
 (1673579122, 'Muhammad Hawari', 10, 348, 'Pekalongan', 51113, '0815673219'),
 (1673580945, 'Muhammad Hawari', 10, 348, 'Pekalongan', 51113, '0815673219'),
 (1673581060, 'Muhammad Hawari', 10, 348, 'Pekalongan', 51113, '0815673219'),
-(1673582002, 'Muhammad Hawari', 10, 348, 'Pekalongan', 51113, '0815673219');
+(1673582002, 'Muhammad Hawari', 10, 348, 'Pekalongan', 51113, '0815673219'),
+(1674186222, 'Muhammad Hawari', 10, 348, 'Pekalongan', 51113, '0815673219'),
+(1674186291, 'Muhammad Hawari', 10, 348, 'Pekalongan', 51113, '0815673219'),
+(1674186425, 'Muhammad Hawari', 10, 348, 'Pekalongan', 51113, '0815673219'),
+(1674186738, 'Muhammad Hawari', 10, 348, 'Pekalongan', 51113, '0815673219'),
+(1674186795, 'Muhammad Hawari', 10, 348, 'Pekalongan', 51113, '0815673219'),
+(1674186890, 'Muhammad Hawari', 10, 348, 'Pekalongan', 51113, '0815673219'),
+(1674187299, 'Muhammad Hawari', 10, 348, 'Pekalongan', 51113, '0815673219'),
+(1674187331, 'Muhammad Hawari', 10, 348, 'Pekalongan', 51113, '0815673219'),
+(1674187746, 'Muhammad Hawari', 10, 348, 'Pekalongan', 51113, '0815673219'),
+(1674187887, 'Muhammad Hawari', 10, 348, 'Pekalongan', 51113, '0815673219'),
+(1674187994, 'Muhammad Hawari', 10, 348, 'Pekalongan', 51113, '0815673219'),
+(1674188090, 'Muhammad Hawari', 10, 348, 'Pekalongan', 51113, '0815673219'),
+(1674188180, 'Muhammad Hawari', 10, 348, 'Pekalongan', 51113, '0815673219'),
+(1674188206, 'Muhammad Hawari', 10, 348, 'Pekalongan', 51113, '0815673219'),
+(1674188286, 'Muhammad Hawari', 10, 348, 'Pekalongan', 51113, '0815673219'),
+(1674188432, 'Muhammad Hawari', 10, 348, 'Pekalongan', 51113, '0815673219'),
+(1674188554, 'Muhammad Hawari', 10, 348, 'Pekalongan', 51113, '0815673219'),
+(1674188599, 'Muhammad Hawari', 10, 348, 'Pekalongan', 51113, '0815673219'),
+(1674188616, 'Muhammad Hawari', 10, 348, 'Pekalongan', 51113, '0815673219'),
+(1674188667, 'Muhammad Hawari', 10, 348, 'Pekalongan', 51113, '0815673219'),
+(1674188716, 'Muhammad Hawari', 10, 348, 'Pekalongan', 51113, '0815673219'),
+(1674188841, 'Muhammad Hawari', 10, 348, 'Pekalongan', 51113, '0815673219'),
+(1674188958, 'Muhammad Hawari', 10, 348, 'Pekalongan', 51113, '0815673219'),
+(1674189179, 'Muhammad Hawari', 10, 348, 'Pekalongan', 51113, '0815673219'),
+(1674189640, 'Muhammad Hawari', 10, 348, 'Pekalongan', 51113, '0815673219'),
+(1674189825, 'Muhammad Hawari', 10, 348, 'Pekalongan', 51113, '0815673219'),
+(1674189884, 'Muhammad Hawari', 10, 348, 'Pekalongan', 51113, '0815673219'),
+(1674189941, 'Muhammad Hawari', 10, 348, 'Pekalongan', 51113, '0815673219'),
+(1674189970, 'Muhammad Hawari', 10, 348, 'Pekalongan', 51113, '0815673219'),
+(1674190024, 'Muhammad Hawari', 10, 348, 'Pekalongan', 51113, '0815673219'),
+(1674196655, 'Muhammad Robba Maulana', 10, 348, 'Jl. KHM Mansur Kergon Gg. 04 Pekalongan', 5111, '085867236412'),
+(1674196874, 'Muhammad Robba Maulana', 10, 348, 'Jl. KHM Mansur Kergon Gg. 04 Pekalongan', 5111, '085867236412'),
+(1674196920, 'Muhammad Robba Maulana', 10, 348, 'Jl. KHM Mansur Kergon Gg. 04 Pekalongan', 5111, '085867236412'),
+(1674196977, 'Muhammad Robba Maulana', 10, 348, 'Jl. KHM Mansur Kergon Gg. 04 Pekalongan', 5111, '085867236412'),
+(1674197056, 'Muhammad Robba Maulana', 10, 348, 'Jl. KHM Mansur Kergon Gg. 04 Pekalongan', 5111, '085867236412'),
+(1674197138, 'Muhammad Robba Maulana', 10, 348, 'Jl. KHM Mansur Kergon Gg. 04 Pekalongan', 5111, '085867236412'),
+(1674197172, 'Muhammad Robba Maulana', 10, 348, 'Jl. KHM Mansur Kergon Gg. 04 Pekalongan', 5111, '085867236412'),
+(1674197284, 'Muhammad Robba Maulana', 10, 348, 'Jl. KHM Mansur Kergon Gg. 04 Pekalongan', 5111, '085867236412'),
+(1674197410, 'Muhammad Robba Maulana', 10, 348, 'Jl. KHM Mansur Kergon Gg. 04 Pekalongan', 5111, '085867236412'),
+(1674197477, 'Muhammad Robba Maulana', 10, 348, 'Jl. KHM Mansur Kergon Gg. 04 Pekalongan', 5111, '085867236412'),
+(1674197514, 'Muhammad Robba Maulana', 10, 348, 'Jl. KHM Mansur Kergon Gg. 04 Pekalongan', 5111, '085867236412'),
+(1674197609, 'Muhammad Robba Maulana', 10, 348, 'Jl. KHM Mansur Kergon Gg. 04 Pekalongan', 5111, '085867236412');
 
 -- --------------------------------------------------------
 
@@ -324,15 +364,61 @@ INSERT INTO `penjualan` (`kd_penjualan`, `kd_faktur`, `kd_produk`, `harga_produk
 (14, 1669464680, 1, 169999.15, 1),
 (15, 1670452243, 2, 11400, 5),
 (16, 1670731740, 1, 270000, 1),
-(22, 1671624257, 1, 270000, 1),
 (23, 1671624633, 1, 270000, 1),
-(24, 1671539854, 3, 135000, 1),
-(25, 1673122327, 3, 135000, 1),
 (26, 1673578974, 1, 270000, 5),
 (27, 1673579122, 7, 446250, 1),
 (28, 1673580945, 6, 7000, 1),
 (29, 1673581060, 6, 7000, 2),
-(30, 1673582002, 7, 446250, 1);
+(35, 1671539854, 4, 413550, 1),
+(37, 1671624257, 8, 105600, 1),
+(38, 1673122327, 8, 105600, 1),
+(39, 1673582002, 8, 105600, 1),
+(41, 1674186222, 8, 105600, 5),
+(42, 1674186291, 5, 44000, 6),
+(43, 1674186425, 3, 135000, 1),
+(44, 1674186738, 3, 135000, 1),
+(45, 1674186795, 7, 446250, 1),
+(46, 1674186890, 2, 11400, 1),
+(47, 1674187299, 2, 11400, 4),
+(48, 1674187331, 1, 270000, 1),
+(49, 1674187746, 8, 105600, 1),
+(50, 1674187887, 8, 105600, 1),
+(53, 1674187994, 3, 135000, 1),
+(54, 1674187994, 7, 446250, 1),
+(55, 1674188090, 6, 7000, 1),
+(56, 1674188180, 6, 7000, 1),
+(57, 1674188206, 7, 446250, 1),
+(58, 1674188286, 3, 135000, 1),
+(61, 1674188432, 3, 135000, 1),
+(62, 1674188554, 7, 446250, 1),
+(63, 1674188599, 3, 135000, 1),
+(64, 1674188616, 8, 105600, 1),
+(65, 1674188667, 8, 105600, 1),
+(67, 1674188716, 4, 413550, 1),
+(68, 1674188841, 6, 7000, 1),
+(70, 1674188958, 6, 7000, 10),
+(73, 1674189179, 4, 413550, 1),
+(74, 1674189179, 8, 105600, 1),
+(75, 1674189179, 2, 11400, 1),
+(76, 1674189640, 2, 11400, 1),
+(78, 1674189640, 3, 135000, 1),
+(79, 1674189825, 3, 135000, 1),
+(80, 1674189884, 3, 135000, 1),
+(81, 1674189941, 2, 11400, 1),
+(82, 1674189970, 6, 7000, 1),
+(83, 1674190024, 8, 105600, 1),
+(84, 1674196655, 8, 105600, 1),
+(85, 1674196874, 1, 270000, 2),
+(86, 1674196920, 8, 105600, 1),
+(87, 1674196977, 2, 11400, 1),
+(88, 1674197056, 2, 11400, 1),
+(89, 1674197138, 2, 11400, 1),
+(90, 1674197172, 8, 105600, 1),
+(91, 1674197284, 6, 7000, 1),
+(92, 1674197410, 3, 135000, 1),
+(93, 1674197477, 3, 135000, 1),
+(94, 1674197514, 8, 105600, 1),
+(95, 1674197609, 6, 7000, 1);
 
 -- --------------------------------------------------------
 
@@ -362,13 +448,14 @@ CREATE TABLE `produk` (
 --
 
 INSERT INTO `produk` (`kd_produk`, `nama_produk`, `kd_kategori`, `kondisi`, `warna`, `ukuran`, `berat`, `harga`, `stok`, `deskripsi`, `foto`, `tgl_produk`, `diskon`, `hargabeli`) VALUES
-(1, 'Burung Love Bird Sepasang', 1, '', 'Biru, Putih', '0', 40, 300000, 0, '', 'produk1112221107461.jpg .png', '2023-01-13 03:03:26', 10, 0),
-(2, 'VOER BURUNG TOP SONG TOPSONG COKLAT', 3, '', 'Coklat', '0', 550, 12000, 30, '<p>Deskripsi pur top song / top song coklat makanan burung murai jalak c.ijo trucuk anis<br />\r\n<br />\r\n<strong>Top Song Coklat</strong><br />\r\n<br />\r\nMakanan Burung merk Top song 3 in 1, diracik agar pencernaan burung kesayangan anda lebih lancar dan sehat. Apalagi dengan ekstra madu dan telor yang diramu khusus agar burung kesayangan rajin berkicau.</p>\r\n', 'produk2212221034461.jpg .png', '2022-12-22 15:37:21', 5, 0),
-(3, 'Sangkar Kandang Large Burung Lovebird Kapsul Warna Merk Boom', 2, '', 'Kuning, Biru, Hitam', 'Diamter 30 cm, Tingg', 5000, 150000, 15, '<p>Kandang burung kapsul besi, biasa di pakai untuk burung&nbsp;Lovebird, Kenari, Parkit, Kacer, dll<br />\r\nbahan besi lebih tebal jari-jari lebih kuat tidak cepat karat,,<br />\r\nharga premium..<br />\r\n<br />\r\nukuran 30x60</p>\r\n\r\n<p>Haturnuhun terimaksi.<br />\r\nsalam kicau mania sejati,,</p>\r\n', 'produk2212221047321.jpg .png', '2023-01-07 20:12:14', 10, 0),
-(4, 'Tangkringan Burung Nuri Kakatua Gantung', 4, '', 'Coklat', '40X40X40', 2000, 459500, 3, '<p>Dibuat dari Bahan berkualitas<br />\r\nKepuasan anda adalah kepuasan kami<br />\r\nJika ada kendala pada paket yang diterima , silahkan infokan ke kami sebelum memberi rating / ulasan</p>\r\n', 'produk2212221056231.jpg .png', '2022-12-22 15:56:23', 10, 0),
-(5, '969 pion kandang burung lovebird gantungan fiber kandang asesoris ', 4, '', 'Putih Corak Hitam', '0', 300, 44000, 6, '<p>TERSEDIA<br />\r\n<br />\r\nPion sangat bagus dari motip dan warna sert bahan nya yang membuat kandang biasa terlihat kandang kelas atas<br />\r\nCat.. Hanya pion</p>\r\n', 'produk2212221100531.jpg .png', '2022-12-22 16:00:53', 0, 0),
-(6, 'Klem kawat 1saset 3bh kawat asesoris jepitan kandang burung lovebird', 4, '', 'Hitam', '0', 750, 7000, 32, '<p>Klem kawat 1saset 3bh kawat asesoris jepitan kandang burung lovebird</p>\r\n\r\n<hr />\r\n<p>Nama Produk : <strong>KLEM KAWAT</strong><br />\r\nKategori : Aksesoris Burung<br />\r\nIsi : 1pcs -&gt; 3 biji</p>\r\n\r\n<hr />\r\n<p>klem atau penjepit tebok ini terdiri dari 3 buah dengan kawat tebal...</p>\r\n', 'produk2212221103551.jpg .png', '2023-01-13 03:37:41', 0, 0),
-(7, 'Kenari Af Super Afs Rasa F1Ys Jantan Bunyi Gacor Banyak Pilihan', 1, '', 'Kuning', '0', 20, 525000, 3, '<p>KUALITAS DIJAMIN GACOR</p>\r\n', 'produk2212221111091.jpg .png', '2023-01-13 03:53:30', 15, 0);
+(1, 'Burung Love Bird Sepasang', 1, '', 'Biru, Putih', '0', 40, 300000, 865, '', 'produk1112221107461.jpg .png', '2023-01-20 06:41:14', 10, 0),
+(2, 'VOER BURUNG TOP SONG TOPSONG COKLAT', 3, '', 'Coklat', '0', 550, 12000, 19, '<p>Deskripsi pur top song / top song coklat makanan burung murai jalak c.ijo trucuk anis<br />\r\n<br />\r\n<strong>Top Song Coklat</strong><br />\r\n<br />\r\nMakanan Burung merk Top song 3 in 1, diracik agar pencernaan burung kesayangan anda lebih lancar dan sehat. Apalagi dengan ekstra madu dan telor yang diramu khusus agar burung kesayangan rajin berkicau.</p>\r\n', 'produk2212221034461.jpg .png', '2023-01-20 06:45:38', 5, 0),
+(3, 'Sangkar Kandang Large Burung Lovebird Kapsul Warna Merk Boom', 2, '', 'Kuning, Biru, Hitam', 'Diamter 30 cm, Tingg', 5000, 150000, 6, '<p>Kandang burung kapsul besi, biasa di pakai untuk burung&nbsp;Lovebird, Kenari, Parkit, Kacer, dll<br />\r\nbahan besi lebih tebal jari-jari lebih kuat tidak cepat karat,,<br />\r\nharga premium..<br />\r\n<br />\r\nukuran 30x60</p>\r\n\r\n<p>Haturnuhun terimaksi.<br />\r\nsalam kicau mania sejati,,</p>\r\n', 'produk2212221047321.jpg .png', '2023-01-20 06:51:17', 10, 0),
+(4, 'Tangkringan Burung Nuri Kakatua Gantung', 4, '', 'Coklat', '40X40X40', 2000, 459500, 0, '<p>Dibuat dari Bahan berkualitas<br />\r\nKepuasan anda adalah kepuasan kami<br />\r\nJika ada kendala pada paket yang diterima , silahkan infokan ke kami sebelum memberi rating / ulasan</p>\r\n', 'produk2212221056231.jpg .png', '2023-01-20 04:33:48', 10, 0),
+(5, '969 pion kandang burung lovebird gantungan fiber kandang asesoris ', 4, '', 'Putih Corak Hitam', '0', 300, 44000, 0, '<p>TERSEDIA<br />\r\n<br />\r\nPion sangat bagus dari motip dan warna sert bahan nya yang membuat kandang biasa terlihat kandang kelas atas<br />\r\nCat.. Hanya pion</p>\r\n', 'produk2212221100531.jpg .png', '2023-01-20 03:44:51', 0, 0),
+(6, 'Klem kawat 1saset 3bh kawat asesoris jepitan kandang burung lovebird', 4, '', 'Hitam', '0', 750, 7000, 16, '<p>Klem kawat 1saset 3bh kawat asesoris jepitan kandang burung lovebird</p>\r\n\r\n<hr />\r\n<p>Nama Produk : <strong>KLEM KAWAT</strong><br />\r\nKategori : Aksesoris Burung<br />\r\nIsi : 1pcs -&gt; 3 biji</p>\r\n\r\n<hr />\r\n<p>klem atau penjepit tebok ini terdiri dari 3 buah dengan kawat tebal...</p>\r\n', 'produk2212221103551.jpg .png', '2023-01-20 06:53:29', 0, 0),
+(7, 'Kenari Af Super Afs Rasa F1Ys Jantan Bunyi Gacor Banyak Pilihan', 1, '', 'Kuning', '0', 20, 525000, 0, '<p>KUALITAS DIJAMIN GACOR</p>\r\n', 'produk2212221111091.jpg .png', '2023-01-20 04:22:34', 15, 0),
+(8, 'Burungmu', 1, '', 'Hijau', '12', 12, 120000, 63, '<p>asfasfasf</p>\r\n', 'produk2001230137581.jpg', '2023-01-20 06:51:54', 12, 0);
 
 -- --------------------------------------------------------
 
@@ -395,7 +482,8 @@ INSERT INTO `promo` (`kd_promo`, `isi`, `kd_produk`) VALUES
 (21, '1', 4),
 (22, '0', 5),
 (23, '', 6),
-(24, '1', 7);
+(24, '1', 7),
+(25, '100000', 8);
 
 -- --------------------------------------------------------
 
@@ -612,7 +700,7 @@ ALTER TABLE `lap_penjualan`
 -- AUTO_INCREMENT untuk tabel `penjualan`
 --
 ALTER TABLE `penjualan`
-  MODIFY `kd_penjualan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
+  MODIFY `kd_penjualan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=96;
 
 --
 -- AUTO_INCREMENT untuk tabel `produk`
@@ -624,7 +712,7 @@ ALTER TABLE `produk`
 -- AUTO_INCREMENT untuk tabel `promo`
 --
 ALTER TABLE `promo`
-  MODIFY `kd_promo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
+  MODIFY `kd_promo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 
 --
 -- AUTO_INCREMENT untuk tabel `rekening`
